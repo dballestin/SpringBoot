@@ -12,7 +12,7 @@ public class Tijera extends ElementoFactory {
 		int resultado;
 		if (numero == PAPEL) {
 			resultado = 1;
-			descripcionResultado = "Tijerra le gano a Papel";
+			descripcionResultado = "Tijera le gano a Papel";
 		} else if (numero == PIEDRA) {
 			resultado = -1;
 			descripcionResultado = "Tijera perdio con Piedra";

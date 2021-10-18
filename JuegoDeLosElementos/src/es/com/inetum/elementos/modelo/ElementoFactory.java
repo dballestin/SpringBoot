@@ -54,6 +54,8 @@ public abstract class ElementoFactory {
 	public static ElementoFactory getInstance(int pNum) {
 		elementos = new ArrayList<ElementoFactory>();
 		elementos.add(new Piedra());
+		elementos.add(new Papel());
+		elementos.add(new Tijera());
 		//van a ir el resto de los elementos
 		for (ElementoFactory elementoFactory : elementos) {
 			if (elementoFactory.isMe(pNum)) {

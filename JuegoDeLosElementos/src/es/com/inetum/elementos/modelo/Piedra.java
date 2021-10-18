@@ -12,10 +12,13 @@ public class Piedra extends ElementoFactory {
 		int resultado;
 		if (numero == TIJERA) {
 			resultado = 1;
+			descripcionResultado = "Piedra le gano a Tijera";
 		} else if (numero == PAPEL) {
 			resultado = -1;
+			descripcionResultado = "Piedra perdio con Papel";
 		} else {
 			resultado = 0;
+			descripcionResultado = "EMPATE";
 		}
 		return resultado;
 	}
