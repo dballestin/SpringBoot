@@ -1,19 +1,19 @@
 package es.com.inetum.elementos.modelo;
 
-public class Piedra extends ElementoFactory {
+public class Spock extends ElementoFactory {
 
-	public Piedra() {
-		super("piedra", 0);
+	public Spock() {
+		super("spock", 4);
 	}
 
 	@Override
 	public int comparar(ElementoFactory pElem) {
 		int numero = pElem.getNumero();
 		int resultado;
-		if (numero == TIJERA || numero == LAGARTO) {
+		if (numero == PIEDRA || numero == TIJERA) {
 			resultado = 1;
 			descripcionResultado = nombre + " le gano a " + ElementoFactory.getInstance(numero).getNombre();
-		} else if (numero == PAPEL || numero == SPOCK) {
+		} else if (numero == PAPEL || numero == LAGARTO) {
 			resultado = -1;
 			descripcionResultado = nombre + " perdio con " + ElementoFactory.getInstance(numero).getNombre();
 		} else {

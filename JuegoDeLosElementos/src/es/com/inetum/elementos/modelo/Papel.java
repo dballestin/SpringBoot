@@ -10,12 +10,12 @@ public class Papel extends ElementoFactory {
 	public int comparar(ElementoFactory pElem) {
 		int numero = pElem.getNumero();
 		int resultado;
-		if (numero == PIEDRA) {
+		if (numero == PIEDRA || numero == SPOCK) {
 			resultado = 1;
-			descripcionResultado = "Papel le gano a Piedra";
-		} else if (numero == TIJERA) {
+			descripcionResultado = nombre + " le gano a " + ElementoFactory.getInstance(numero).getNombre();
+		} else if (numero == TIJERA || numero == LAGARTO) {
 			resultado = -1;
-			descripcionResultado = "Papel perdio con Tijera";
+			descripcionResultado = nombre + " perdio con " + ElementoFactory.getInstance(numero).getNombre();
 		} else {
 			resultado = 0;
 			descripcionResultado = "EMPATE";
