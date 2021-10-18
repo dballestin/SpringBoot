@@ -1,0 +1,17 @@
+package es.com.inetum.elementos.modelo;
+
+public class Piedra extends ElementosFactory {
+
+	@Override
+	public boolean isMe(int pNum) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int comparar(ElementosFactory pElem) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

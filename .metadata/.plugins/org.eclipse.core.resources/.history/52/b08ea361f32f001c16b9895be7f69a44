@@ -1,0 +1,21 @@
+package es.com.inetum.elementos.modelo;
+
+import java.util.List;
+
+public abstract class ElementosFactory {
+	//atributos
+	protected String descripcionResultado;
+	private static List<ElementosFactory> elementos;
+	protected String nombre;
+	protected int numero;
+	
+	//constructor
+	public ElementosFactory() {
+	}
+	
+	
+	
+	//getter y setter accesors
+	
+	
+}

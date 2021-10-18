@@ -1,0 +1,5 @@
+package es.com.inetum.elementos.modelo;
+
+public abstract class ElementosFactory {
+
+}

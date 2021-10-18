@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;es.com.inetum.elementos.modelo.ElementosFactory&apos; to &apos;ElementoFactory&apos;&#x0D;&#x0A;- Original project: &apos;JuegoDeLosElementos&apos;&#x0D;&#x0A;- Original element: &apos;es.com.inetum.elementos.modelo.ElementosFactory&apos;&#x0D;&#x0A;- Renamed element: &apos;es.com.inetum.elementos.modelo.ElementoFactory&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ElementosFactory&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;es.com.inetum.elementos.modelo{ElementosFactory.java[ElementosFactory" matchStrategy="1" name="ElementoFactory" qualified="false" references="true" similarDeclarations="false" stamp="1634550715656" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,54 @@
+package es.com.inetum.elementos.modelo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class ElementosFactory {
+	//atributos
+	protected String descripcionResultado;
+	private static List<ElementosFactory> elementos;
+	protected String nombre;
+	protected int numero;
+	
+	//constructor
+	public ElementosFactory() {
+	}
+
+	public ElementosFactory(String pNombre, int pNumero) {
+		nombre = pNombre;
+		numero = pNumero;
+	}
+
+	//getter y setter accesors
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public String getDescripcionResultado() {
+		return descripcionResultado;
+	}
+	
+	//metodos de negocio
+	public abstract boolean isMe(int pNum);	
+	public abstract int comparar(ElementosFactory pElem);
+	
+	public static ElementosFactory getInstance(int pNum) {
+		elementos = new ArrayList<ElementosFactory>();
+		elementos.add(new Piedra());
+		//van a ir el resto de los elementos
+		
+		return null;
+	}
+}
