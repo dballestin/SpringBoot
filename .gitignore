@@ -1,0 +1,17 @@
+ECHO is off.
+bin/
+.metadata
+*~
+target/
+*/target/*
+.project
+.classpath
+.settings
+.idea
+zip
+itests/.settings/
+impl/.settings/
+.settings/
+*.project
+*.log
+.recommenders
