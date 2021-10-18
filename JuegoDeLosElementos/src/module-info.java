@@ -1,2 +1,3 @@
 module JuegoDeLosElementos {
+	requires junit;
 }
