@@ -3,6 +3,7 @@ package com.gabrielCode.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -17,7 +18,10 @@ public class DemoController {
 	
 	@GetMapping("/greeting")
 	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-		Persona per = new Persona(1, "Gabriel Casas");
+		if ("World".equals(name)) {
+			name = "GabrielCode";
+		}
+		Persona per = new Persona(0, name);
 		repo.save(per);
 		
 		model.addAttribute("name", name);

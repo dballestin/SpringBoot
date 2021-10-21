@@ -2,12 +2,15 @@ package com.gabrielCode.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Persona {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int codigo;
 	@Column(name="PER_NOMBRE", length = 50)
 	private String nombre;
