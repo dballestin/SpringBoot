@@ -2,11 +2,10 @@ package com.gabrielCode.repo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.gabrielCode.model.Usuario;
 
@@ -17,20 +16,15 @@ class IUsuarioRepoTest {
 	IUsuarioRepo usuRepo;
 	Usuario usu;
 	
-	@BeforeEach
-	void setUp() throws Exception {
-		usu = new Usuario(0, "Gabriel", "gcasas");
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-		usu = null;
-	}
+	@Autowired
+	private BCryptPasswordEncoder encoder;
 	
 	@Test
 	void testAgregar() {
+		Usuario usu = new Usuario(0, "Gabriel", encoder.encode("gcasas"));
 		Usuario usuRetorno = usuRepo.save(usu);
-		assertEquals("gcasas", usuRetorno.getClave());
+		assertEquals(usu.getClave(), usuRetorno.getClave());
+		System.out.println(usu.getClave());
 		usuRepo.delete(usuRetorno);
 	}
 
