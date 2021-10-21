@@ -18,6 +18,10 @@ public class Persona {
 	public Persona() {
 	}
 	
+	public Persona(int pCod) {
+		codigo = pCod;
+	}
+	
 	public Persona(int pCod, String pNom) {
 		codigo = pCod;
 		nombre = pNom;
