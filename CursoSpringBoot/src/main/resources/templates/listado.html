@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1>PROFESOR <span th:text="${profesor}"></span></h1>
+	<table style="border-style:solid;border-collapse:collapse;">
+		<tr style="border-style:solid;">
+			<th style="border-style:solid;">Nombre</th>
+			<th style="border-style:solid;">Apellido</th>
+			<th style="border-style:solid;">Email</th>
+			<th style="border-style:solid;">Estudios</th>
+			<th style="border-style:solid;">Link a repositorio</th>
+			<th style="border-style:solid;">Observaciones</th>
+		</tr>
+		<tr th:each="alumno : ${alumnos}" style="border-style:solid;">
+			<td th:text="${alumno.nombre}" style="border-style:solid;" />
+			<td th:text="${alumno.apellido}" style="border-style:solid;" />
+			<td th:text="${alumno.email}" style="border-style:solid;" />
+			<td th:text="${alumno.estudios}" style="border-style:solid;" />
+			<td th:text="${alumno.linkARepositorio}" style="border-style:solid;" />
+			<td th:text="${alumno.observaciones}" style="border-style:solid;" />
+		</tr>
+	</table>	
+</body>
+</html>
